@@ -101,11 +101,11 @@ class Auth extends CI_Controller
         $mail->Host = 'smtp.gmail.com';
         $mail->SMTPAuth = true;
         $mail->Username = 'iamnotlipky@gmail.com';
-        $mail->Password = 'msommnkiaklvrioz';
+        $mail->Password = 'yoursecondgooglepassword';
         $mail->SMTPSecure = 'tls';
         $mail->Port = 587;
-        $mail->setFrom('iamnotlipky@gmail.com', 'Website Desa Sutapranan');
-        $mail->addAddress($email, 'Iam Not Lipky');
+        $mail->setFrom('youremail@example.com', 'App Name');
+        $mail->addAddress($email, 'Your Name');
         $mail->Subject = "Reset Kata Sandi";
 
         $clean = $this->security->xss_clean($email);
