@@ -101,11 +101,9 @@ class Admin extends CI_Controller
             $gambar = $gambar['file_name'];
             $nama = $this->input->post('nama', true);
             $jabatan = $this->input->post('jabatan', true);
-            $deskripsi = $this->input->post('deskripsi', true);
             $data = [
                 'nama' => $nama,
                 'jabatan' => $jabatan,
-                'deskripsi' => $deskripsi,
                 'gambar' => $gambar
             ];
 
@@ -123,7 +121,6 @@ class Admin extends CI_Controller
         $id = $this->input->post('id');
         $nama = $this->input->post('nama');
         $jabatan = $this->input->post('jabatan');
-        $deskripsi = $this->input->post('deskripsi', true);
 
         $upload_image = $_FILES['gambar']['name'];
         if ($upload_image) {
@@ -150,7 +147,6 @@ class Admin extends CI_Controller
 
         $this->db->set('nama', $nama);
         $this->db->set('jabatan', $jabatan);
-        $this->db->set('deskripsi', $deskripsi);
         $this->db->where('id', $id);
         $this->db->update('perangkatdesa');
 
