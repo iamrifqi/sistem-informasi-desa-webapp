@@ -21,6 +21,7 @@
                         <li><i class="bi bi-chevron-right"></i> <a href="<?= base_url('user/galeri'); ?>">Galeri</a></li>
                         <li><i class="bi bi-chevron-right"></i> <a href="<?= base_url('user/artikeldanberita'); ?>">Artikel dan Berita</a></li>
                         <li><i class="bi bi-chevron-right"></i> <a href="<?= base_url('user/kontak'); ?>">Kontak</a></li>
+                        <li><i class="bi bi-chevron-right"></i> <a href="<?= base_url('auth'); ?>">Masuk Admin</a></li>
                     </ul>
                 </div>
 
