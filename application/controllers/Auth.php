@@ -101,7 +101,7 @@ class Auth extends CI_Controller
         $mail->Host = 'smtp.gmail.com';
         $mail->SMTPAuth = true;
         $mail->Username = 'iamnotlipky@gmail.com';
-        $mail->Password = 'yoursecondgooglepassword';
+        $mail->Password = 'yourpassword';
         $mail->SMTPSecure = 'tls';
         $mail->Port = 587;
         $mail->setFrom('youremail@example.com', 'App Name');
