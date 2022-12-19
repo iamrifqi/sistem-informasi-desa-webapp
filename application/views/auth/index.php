@@ -39,9 +39,9 @@
                                         <div class="col-12">
                                             <hr>
                                         </div>
-                                        <div class="col-12 text-center">
+                                        <!-- <div class="col-12 text-center">
                                             <a href="<?= base_url('auth/lupapassword'); ?>">Lupa Kata Sandi?</a>
-                                        </div>
+                                        </div> -->
                                         <div class="col-12 text-center mb-3">
                                             <a href="<?= base_url(); ?>"><i class="bi bi-arrow-bar-left"></i> Kembali</a>
                                         </div>

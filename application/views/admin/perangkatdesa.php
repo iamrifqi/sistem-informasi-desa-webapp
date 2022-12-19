@@ -109,12 +109,6 @@
                                             </div>
                                         </div>
                                         <div class="row mb-3">
-                                            <label for="deskripsi" class="col-sm-2 col-form-label">Deskripsi</label>
-                                            <div class="col-sm-10">
-                                                <textarea class="form-control" id="deskripsi" name="deskripsi" rows="3" required oninvalid="this.setCustomValidity('Masukkan deskripsi singkat perangkat desa!')" oninput="setCustomValidity('')"></textarea>
-                                            </div>
-                                        </div>
-                                        <div class="row mb-3">
                                             <label for="gambar" class="col-sm-2 col-form-label">Foto</label>
                                             <div class="col-sm-10">
                                                 <input class="form-control" type="file" id="gambar" name="gambar" required oninvalid="this.setCustomValidity('Masukkan foto perangkat desa!')" oninput="setCustomValidity('')">
@@ -171,7 +165,6 @@
                                                                         <div class="card-body">
                                                                             <h5 class="card-title"><?= $pd['nama']; ?></h5>
                                                                             <p class="card-text"><?= $pd['jabatan']; ?></p>
-                                                                            <p class="card-text"><?= $pd['deskripsi']; ?></p>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -213,12 +206,6 @@
                                                                 <label for="jabatan" class="col-sm-2 col-form-label">Jabatan</label>
                                                                 <div class="col-sm-10">
                                                                     <input type="text" class="form-control" id="jabatan" name="jabatan" value="<?= $pd['jabatan']; ?>" required oninvalid="this.setCustomValidity('Masukkan jabatan perangkat desa!')" oninput="setCustomValidity('')">
-                                                                </div>
-                                                            </div>
-                                                            <div class="row mb-3">
-                                                                <label for="deskripsi" class="col-sm-2 col-form-label">Deskripsi</label>
-                                                                <div class="col-sm-10">
-                                                                    <textarea class="form-control" id="deskripsi" name="deskripsi" rows="3" required oninvalid="this.setCustomValidity('Masukkan deskripsi singkat perangkat desa!')" oninput="setCustomValidity('')"><?= $pd['deskripsi']; ?></textarea>
                                                                 </div>
                                                             </div>
                                                             <div class="row mb-3">

@@ -74,8 +74,8 @@ class User extends CI_Controller
             $data['keyword'] = $this->session->userdata('keyword');
         }
 
-        $this->db->like('judul', $data['keyword']);
-        $this->db->or_like('isi', $data['keyword']);
+        // $this->db->like('judul', $data['keyword']);
+        // $this->db->or_like('isi', $data['keyword']);
         $this->db->from('artikeldanberita');
         $config['total_rows'] = $this->db->count_all_results();
         $data['total_rows'] = $config['total_rows'];

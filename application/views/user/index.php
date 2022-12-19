@@ -16,7 +16,6 @@
                 <div class="container text-center">
 
                     <div class="row gy-4">
-
                         <?php foreach ($papaninformasi as $pi) : ?>
                             <div class="col-lg-4 col-md-6" data-aos="zoom-out">
                                 <div class="service-item position-relative">
@@ -39,6 +38,7 @@
 
                     <div class="section-header">
                         <h2>Sambutan Kepala Desa</h2>
+                        <?php echo CI_VERSION; ?>
                         <p>Desa Sutapranan Kecamatan Dukuhturi Kabupaten Tegal</p>
                     </div>
 
