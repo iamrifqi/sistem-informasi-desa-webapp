@@ -11,6 +11,10 @@ Special Thanks To:
 5. CodeIgniter V.3 and Bootstrap for Framework
 6. Visual Studio Code for Best Code Editor
 
+Admin Page Login
+Username : admin123
+Password : admin123
+
 Instagram: https://www.instagram.com/iamnotlipky/
 
 ##############################################################################
