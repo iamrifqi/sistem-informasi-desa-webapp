@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 23, 2022 at 08:28 AM
--- Server version: 10.4.14-MariaDB
--- PHP Version: 7.2.33
+-- Generation Time: Dec 19, 2022 at 10:58 PM
+-- Server version: 10.4.27-MariaDB
+-- PHP Version: 8.1.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `suta`
+-- Database: `websid`
 --
 
 -- --------------------------------------------------------
@@ -34,14 +34,14 @@ CREATE TABLE `admin` (
   `password` varchar(128) NOT NULL,
   `email` varchar(128) NOT NULL,
   `image` varchar(128) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `admin`
 --
 
 INSERT INTO `admin` (`id`, `name`, `username`, `password`, `email`, `image`) VALUES
-(1, 'Sutapranan', 'admin123', '$2y$10$/tZsav0/eDqa2nC8yPXDYeFbQiXLUu1GzncrBAAWVO/s8ZTDBCNX6', 'desasutapranan@gmail.com', 'default1.jpg');
+(1, 'Sutapranan', 'admin123', '$2y$10$/tZsav0/eDqa2nC8yPXDYeFbQiXLUu1GzncrBAAWVO/s8ZTDBCNX6', 'iamnotlipky@gmail.com', 'default1.jpg');
 
 -- --------------------------------------------------------
 
@@ -56,7 +56,7 @@ CREATE TABLE `artikeldanberita` (
   `gambar` varchar(128) NOT NULL,
   `tanggal` int(11) NOT NULL,
   `isi` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `artikeldanberita`
@@ -65,8 +65,7 @@ CREATE TABLE `artikeldanberita` (
 INSERT INTO `artikeldanberita` (`id`, `judul`, `id_kategori`, `gambar`, `tanggal`, `isi`) VALUES
 (3, 'Pelatihan Bimtek Web Desa untuk meningkatkan kreadibilitas Perangkat Desa', 2, '20220726_220515.jpg', 1658852803, 'Slawi- Beberapa Perangkat desa kecamatan dukuhturi dan pangkah mengikuti Pelatihan bimtek web desa yang diselenggarakan oleh Diskominfo Kabupaten Tegal (16/10). \r\n<br><br>\r\nTujuan diadakannya bimtek tersebut ialah untuk memfasilitasi dan memberikan ilmu untuk desa agar dapat membuat web. karna sistem informasi di era global ini harusnya meningkat. untuk membuat suatu web agar bisa dinikmati oleh kalangan luas tidaklah hanya satu hari kelar, maka dari itu Diskominfo kabupaten tegal memfasilitasi agar nantinya bisa terbentuk web yang baik, dan selanjutnya diharapkan dengan ilmu yang telah didapat perangkat desa tersebut mampu mengeksplore dan menjalankan web tersebut dengan baik.'),
 (4, 'Sosialisasi dan Pelatihan Jurnalistik untuk Website Desa SeKabupaten Tegal', 2, '20220726_220446.jpg', 1658853229, 'Slawi, Sejumlah perangkat desa Sekabupaten tegal hari ini (22/11) mengikuti sosialisasi dan pelatihan tentang jurnalistik yang terbagi dalam 3 Ruangan. Salah satu ruangan yang diisi oleh perangkat desa sekecamatan dukuhturi adalah di Aula pertemuan gedung Candra Kirana Kabupaten Tegal.\r\n<br><br>\r\nKegiatan ini bertujuan agar perangkat desa yang mengikuti kegiatan ini mampu menulis berita dengan baik dan benar serta dapat menginformasikan berita yang dibuat kepada masyarakat melalui website yang telah dimiliki oleh desa.\r\n<br><br>\r\nSelanjutnya, kegiatan ini seharusnya mampu dan bisa memajukan kinerja perangkat desa dalam hal IT agar tidak tertinggal oleh kemajuan teknologi yang sangat pesat ini.\r\n<br><br>\r\nMaka dari itu, dari dinas pemberdayaan masyarakat desa kabupaten tegal mau memfasilitasi kegiatan ini.'),
-(46, 'dqwdqw', 1, '750x500xbrickpile_jpg_pagespeed_ic_9in6q3Rpj-.jpg', 1659517901, 'dqwdqwdqwdq'),
-(47, 'Karang Taruna', 6, '20220726_220141.jpg', 1659529216, 'Rapat Karang Taruna');
+(47, 'Karang Taruna', 0, '20220726_220141.jpg', 1659529216, 'Rapat Karang Taruna');
 
 -- --------------------------------------------------------
 
@@ -79,7 +78,7 @@ CREATE TABLE `bumdes` (
   `simbol` varchar(128) NOT NULL,
   `nama` varchar(128) NOT NULL,
   `isi` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `bumdes`
@@ -99,7 +98,7 @@ CREATE TABLE `filter` (
   `id` int(11) NOT NULL,
   `nama` varchar(128) NOT NULL,
   `filter` varchar(128) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `filter`
@@ -122,7 +121,7 @@ CREATE TABLE `galeri` (
   `gambar` varchar(128) NOT NULL,
   `filter` varchar(128) NOT NULL,
   `tanggal` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `galeri`
@@ -148,7 +147,7 @@ INSERT INTO `galeri` (`id`, `judul`, `gambar`, `filter`, `tanggal`) VALUES
 CREATE TABLE `kategori` (
   `id` int(11) NOT NULL,
   `kategori` varchar(128) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `kategori`
@@ -170,7 +169,7 @@ CREATE TABLE `kepaladesa` (
   `nama` varchar(128) NOT NULL,
   `jabatan` varchar(128) NOT NULL,
   `gambar` varchar(128) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `kepaladesa`
@@ -190,7 +189,7 @@ CREATE TABLE `kontak` (
   `simbol` varchar(128) NOT NULL,
   `nama` varchar(128) NOT NULL,
   `isi` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `kontak`
@@ -212,7 +211,7 @@ CREATE TABLE `papaninformasi` (
   `simbol` varchar(128) NOT NULL,
   `nama` varchar(128) NOT NULL,
   `isi` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `papaninformasi`
@@ -234,7 +233,7 @@ CREATE TABLE `pengurus` (
   `nama` varchar(128) NOT NULL,
   `jabatan` varchar(128) NOT NULL,
   `gambar` varchar(128) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `pengurus`
@@ -253,21 +252,20 @@ CREATE TABLE `perangkatdesa` (
   `id` int(11) NOT NULL,
   `nama` varchar(128) NOT NULL,
   `jabatan` varchar(128) NOT NULL,
-  `deskripsi` text NOT NULL,
   `gambar` varchar(128) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `perangkatdesa`
 --
 
-INSERT INTO `perangkatdesa` (`id`, `nama`, `jabatan`, `deskripsi`, `gambar`) VALUES
-(34, 'Sri Rahayuningsih', 'Kepala Seksi Pemerintahan', 'Bertugas sebagai palaksana teknik yang membantu Kepala Desa di bidang pemerintahan, menyusun dan mengevaluasi data di bidang pemerintahan desa, mengumpulkan bahan dalam rangka pembinaan wilayah dan masyarakat dan pelaksanakan kegiatan pelayanan administrasi pertahanan dan administrasi perlindungan masyarakat.', 'kaper.png'),
-(35, 'Moh. Ali', 'Kepala Seksi Kesejahteraan dan Pelayanan', '', 'lebe.png'),
-(36, 'Faisol, S.Th.I', 'Sekretaris Desa', '', 'sekdes.png'),
-(37, 'Puji Sulistyaningsih', 'Staff Desa', '', 'mbatia.png'),
-(38, 'Puji Rakhmawati', 'Kepala Urusan Keuangan', '', 'bupuji.png'),
-(39, 'Bulyamin', 'Kepala Urusan Pembangunan dan Perencanaan', '', 'umbul.png');
+INSERT INTO `perangkatdesa` (`id`, `nama`, `jabatan`, `gambar`) VALUES
+(34, 'Sri Rahayuningsih', 'Kepala Seksi Pemerintahan', 'kaper.png'),
+(35, 'Moh. Ali', 'Kepala Seksi Kesejahteraan dan Pelayanan', 'lebe.png'),
+(36, 'Faisol, S.Th.I', 'Sekretaris Desa', 'sekdes.png'),
+(37, 'Puji Sulistyaningsih', 'Staff Desa', 'mbatia.png'),
+(38, 'Puji Rakhmawati', 'Kepala Urusan Keuangan', 'bupuji.png'),
+(39, 'Bulyamin', 'Kepala Urusan Pembangunan dan Perencanaan', 'umbul.png');
 
 -- --------------------------------------------------------
 
@@ -279,7 +277,7 @@ CREATE TABLE `perdes` (
   `id` int(11) NOT NULL,
   `tahun` varchar(128) NOT NULL,
   `link` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `perdes`
@@ -300,7 +298,7 @@ CREATE TABLE `perkades` (
   `id` int(11) NOT NULL,
   `tahun` varchar(16) NOT NULL,
   `link` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -314,7 +312,7 @@ CREATE TABLE `pesan` (
   `alamat` text NOT NULL,
   `tanggal` int(11) NOT NULL,
   `isi` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `pesan`
@@ -334,7 +332,7 @@ CREATE TABLE `potensi` (
   `nama` varchar(128) NOT NULL,
   `gambar` varchar(128) NOT NULL,
   `isi` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `potensi`
@@ -354,7 +352,7 @@ CREATE TABLE `tokens` (
   `token` varchar(256) NOT NULL,
   `user_id` int(11) NOT NULL,
   `created` date NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `tokens`
@@ -406,7 +404,8 @@ INSERT INTO `tokens` (`id`, `token`, `user_id`, `created`) VALUES
 (62, 'bfcb3fad97f77f3adc03a9cad00e15', 1, '2022-08-02'),
 (63, 'b427b97799f4728901b3a55f38bb17', 1, '2022-08-02'),
 (64, '9517191f0ce6e85d4daf5849a006dc', 1, '2022-08-02'),
-(65, '606cd85ae37f04b9c70770dea6b599', 1, '2022-08-04');
+(65, '606cd85ae37f04b9c70770dea6b599', 1, '2022-08-04'),
+(66, '75ba666243dd568e39eb4ed2ac44cb', 1, '2022-12-19');
 
 -- --------------------------------------------------------
 
@@ -418,7 +417,7 @@ CREATE TABLE `unitusaha` (
   `id` int(11) NOT NULL,
   `nama` text NOT NULL,
   `isi` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `unitusaha`
@@ -601,7 +600,7 @@ ALTER TABLE `pengurus`
 -- AUTO_INCREMENT for table `perangkatdesa`
 --
 ALTER TABLE `perangkatdesa`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
 
 --
 -- AUTO_INCREMENT for table `perdes`
@@ -619,7 +618,7 @@ ALTER TABLE `perkades`
 -- AUTO_INCREMENT for table `pesan`
 --
 ALTER TABLE `pesan`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `potensi`
@@ -631,7 +630,7 @@ ALTER TABLE `potensi`
 -- AUTO_INCREMENT for table `tokens`
 --
 ALTER TABLE `tokens`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=66;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=67;
 
 --
 -- AUTO_INCREMENT for table `unitusaha`

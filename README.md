@@ -20,8 +20,9 @@ Instagram: https://www.instagram.com/iamnotlipky/
 ##############################################################################
 
 Login Page
-Username : admin123
-Password : admin123
+
+- Username : admin123
+- Password : admin123
 
 ##############################################################################
 
@@ -31,6 +32,7 @@ Update 20 December 2022
 2. Update fixing bug in Artikel dan Berita Page
 3. Update Lupa Password Page, now this feature is disable cause Google Issue
 4. Update Deskripsi in Perangkat Desa, now this feature is disable
+5. Update database for new feature
 
 ##############################################################################
 
