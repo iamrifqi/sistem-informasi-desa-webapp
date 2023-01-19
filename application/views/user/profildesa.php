@@ -174,8 +174,17 @@
                 </div>
 
                 <div class="tab-pane" id="tab-4">
-                    <h3 class="text-center mb-0">Potensi Desa</h3>
+                    <h3 class="text-center mb-3">Potensi Desa</h3>
                     <div class="row row-cols-1 row-cols-md-3 g-4">
+
+                        <?php if (empty($potensi)) : ?>
+                             <div class="col-lg-12 text-center">
+                                <div class="alert alert-danger" role="alert">
+                                    Informasi belum ditambahkan.
+                                </div>
+                            </div>
+                        <?php endif; ?>
+
                         <?php foreach ($potensi as $pt) : ?>
                             <div class="col">
                                 <div class="card h-100">

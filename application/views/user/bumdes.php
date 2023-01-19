@@ -49,6 +49,14 @@
                             <h3 class="text-center mb-3">Pengurus BUMDes</h3>
 
                             <div class="row gy-5">
+                                <?php if (empty($pengurus)) : ?>
+                                    <div class="col-lg-12 text-center">
+                                        <div class="alert alert-danger" role="alert">
+                                            Informasi pengurus belum ditambahkan.
+                                        </div>
+                                    </div>
+                                <?php endif; ?>
+
                                 <?php foreach ($pengurus as $p) : ?>
                                     <div class="col-xl-4 col-md-6 d-flex" data-aos="zoom-in" data-aos-delay="200">
                                         <div class="features-member">
@@ -63,6 +71,7 @@
                                     </div>
                                 <?php endforeach; ?>
                             </div>
+
                         </div>
                     </div>
                 </div>
@@ -74,6 +83,7 @@
                                 <h3 class="text-center mb-3"><?= $b['nama']; ?></h3>
                                 <p>
                                     <?= $b['isi']; ?>
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -83,6 +93,14 @@
                     <div class="row gy-4">
                         <div class="col-lg-12" data-aos="fade-up" data-aos-delay="100">
                             <h3 class="text-center mb-3">Unit Usaha BUMDes</h3>
+
+                            <?php if (empty($unitusaha)) : ?>
+                                <div class="col-lg-12 text-center">
+                                    <div class="alert alert-danger" role="alert">
+                                        Informasi belum ditambahkan.
+                                    </div>
+                                </div>
+                            <?php endif; ?>
 
                             <?php foreach ($unitusaha as $uu) : ?>
                                 <p>

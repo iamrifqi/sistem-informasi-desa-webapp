@@ -38,12 +38,22 @@
                     <div class="row gy-4">
                         <div class="col-lg-12" data-aos="fade-up" data-aos-delay="100">
                             <h3 class="mb-3">PERDES</h3>
-                            <ul>
-                                <?php foreach ($perdes as $pd) : ?>
-                                    <li><i class="bi bi-check-circle-fill"></i> PERDES TAHUN <?= $pd['tahun']; ?> <a href="<?= $pd['link']; ?>">DOWNLOAD</a></li>
-                                <?php endforeach; ?>
-                            </ul>
                         </div>
+
+                        <?php if (empty($perdes)) : ?>
+                             <div class="col-lg-12 text-center">
+                                <div class="alert alert-danger" role="alert">
+                                    Informasi belum ditambahkan.
+                                </div>
+                            </div>
+                        <?php endif; ?>
+
+                        <ul>
+                            <?php foreach ($perdes as $pd) : ?>
+                                <li><i class="bi bi-check-circle-fill"></i> PERDES TAHUN <?= $pd['tahun']; ?> <a href="<?= $pd['link']; ?>">DOWNLOAD</a></li>
+                            <?php endforeach; ?>
+                        </ul>
+                        
                     </div>
                 </div>
 
@@ -52,11 +62,21 @@
                         <div class="col-lg-12" data-aos="fade-up" data-aos-delay="100">
                             <h3 class="mb-3">PERKADES</h3>
                         </div>
-                        <ul>
+                        
+                        <?php if (empty($perkades)) : ?>
+                             <div class="col-lg-12 text-center">
+                                <div class="alert alert-danger" role="alert">
+                                    Informasi belum ditambahkan.
+                                </div>
+                            </div>
+                        <?php endif; ?>
+
+                         <ul>
                             <?php foreach ($perkades as $pkd) : ?>
                                 <li><i class="bi bi-check-circle-fill"></i> PERDES TAHUN <?= $pkd['tahun']; ?> <a href="<?= $pkd['link']; ?>">DOWNLOAD</a></li>
                             <?php endforeach; ?>
                         </ul>
+
                     </div>
                 </div>
 

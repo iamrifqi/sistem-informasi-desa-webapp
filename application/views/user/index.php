@@ -38,7 +38,6 @@
 
                     <div class="section-header">
                         <h2>Sambutan Kepala Desa</h2>
-                        <?php echo CI_VERSION; ?>
                         <p>Desa Sutapranan Kecamatan Dukuhturi Kabupaten Tegal</p>
                     </div>
 

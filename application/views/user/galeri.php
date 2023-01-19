@@ -23,7 +23,15 @@
                     <?php endforeach; ?>
                 </ul>
 
-                <div class="row g-0 portfolio-container">
+                <div class="row g-0 portfolio-container mb-5 justify-content-center">
+
+                    <?php if (empty($galeri)) : ?>
+                        <div class="col-xl-9 col-lg-9 col-md-6 col-12 text-center">
+                            <div class="alert alert-danger" role="alert">
+                                Galeri desa belum ditambahkan.
+                            </div>
+                        </div>
+                    <?php endif; ?>
 
                     <?php foreach ($galeri as $g) : ?>
                         <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-<?= $g['filter']; ?>">

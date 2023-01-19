@@ -11,10 +11,6 @@ Special Thanks To:
 5. CodeIgniter V.3 and Bootstrap for Framework
 6. Visual Studio Code for Best Code Editor
 
-Admin Page Login
-Username : admin123
-Password : admin123
-
 Instagram: https://www.instagram.com/iamnotlipky/
 
 ##############################################################################
@@ -26,16 +22,18 @@ Login Page
 
 ##############################################################################
 
-Update 20 December 2022
+Update 19 Januari 2023
 
 1. Update CodeIgniter Version 3.1.10 to Version 3.1.12
 2. Update fixing bug in Artikel dan Berita Page
 3. Update Lupa Password Page, now this feature is disable cause Google Issue
 4. Update Deskripsi in Perangkat Desa, now this feature is disable
 5. Update database for new feature
+6. Add alert in every database when empty
+7. Modify user page
 
 ##############################################################################
 
-Thank for your time
+Thank you
 
 ##############################################################################
